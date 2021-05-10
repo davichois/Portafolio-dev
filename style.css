@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  height: 76px;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 58, 58),
+    rgba(18, 80, 206),
+    rgb(58, 58, 58)
+  );
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid white;
+}
+
+.logo h3 {
+  color: white;
+}
+
+.nav-ul {
+  display: flex;
+  list-style: none;
+}
+
+.ul-li {
+  padding-right: 10px;
+}
+
+.ul-li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bolder;
+  margin: 10px;
+  text-shadow: 0px 6px 16px black;
+}
+
+.ul-li a:hover {
+  background-color: rgb(0, 145, 255);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0px 3px black;
+}
+
+.bx {
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 40px;
+  margin-bottom: 15px;
+  color: #083692;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 6px #021741;
+}
+
+.fondo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "carta img ."
+    "p1 img p2";
+  height: 89.2vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  top: 75px;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 58, 58),
+    rgba(18, 80, 206),
+    rgb(58, 58, 58)
+  );
+}
+
+.fondo-logo img {
+  height: 400px;
+  background-size: cover;
+}
+.fondo-logo {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fondo-carta {
+  grid-area: carta;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carta {
+  background-color: rgba(58, 58, 58);
+  height: 70px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.487);
+}
+
+.carta:hover {
+  height: 71.5px;
+  width: 201.5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.fondo-p1 {
+  grid-area: p1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.fondo-p2 {
+  grid-area: p2;
+}
+
+.main::before {
+  content: "";
+  display: block;
+}
+
+main {
+  margin: 0px 40px 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    padding: 60px 40px;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(
+      90deg,
+      rgba(58, 58, 58),
+      rgba(18, 80, 206),
+      rgb(58, 58, 58)
+    );
+  }
+  .nav {
+    margin-top: 10px;
+  }
+
+  .fondo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      ". img ."
+      "p1 carta .";
+    height: 82.4vh;
+    top: 120px;
+  }
+
+  .fondo-logo img {
+    height: 290px;
+    background-size: cover;
+  }
+
+  .fondo-carta {
+    grid-area: carta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fondo-p1 {
+    grid-area: p1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+}
